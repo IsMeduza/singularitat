@@ -9,8 +9,6 @@ import Camera from './Camera.js'
 import Input from "@experience/Utils/Input.js";
 import Environment from "./Environment.js";
 
-import ExampleClass from "./ExampleClass.js";
-
 import BlackHole from "@experience/Worlds/MainWorld/BlackHole.js";
 
 import { color, uniform } from "three/tsl";
