@@ -9,13 +9,11 @@ export default class Renderer {
         this.canvas = this.experience.canvas
         this.sizes = this.experience.sizes
 
-        this.debug = this.experience.debug
         this.resources = this.experience.resources
         this.html = this.experience.html
 
 
         this.setInstance()
-        this.setDebug()
     }
 
     postInit() {
@@ -33,8 +31,8 @@ export default class Renderer {
 
         this.instance = new THREE.WebGPURenderer( {
             canvas: this.canvas,
-            //powerPreference: "high-performance",
-            antialias: true,
+            powerPreference: "high-performance",
+            antialias: false,
             //samples: 4,
             alpha: false,
             stencil: false,
@@ -44,9 +42,7 @@ export default class Renderer {
             forceWebGL: false
         } )
 
-        this.instance.shadowMap.enabled = true;
-        //this.instance.shadowMap.type = THREE.PCFShadowMap;
-        this.instance.shadowMap.type = THREE.PCFSoftShadowMap;
+        this.instance.shadowMap.enabled = false;
 
 
         //this.instance.compile = compilePatch.bind( this.instance.compile )
@@ -56,7 +52,6 @@ export default class Renderer {
         this.instance.setPixelRatio( Math.min( this.sizes.pixelRatio, 2 ) )
 
         this.instance.setClearColor( this.clearColor, 1 )
-        this.instance.setSize( this.sizes.width, this.sizes.height )
 
         this.instance.toneMapping = THREE.ACESFilmicToneMapping
         //this.instance.toneMapping = THREE.AgXToneMapping
@@ -103,11 +98,7 @@ export default class Renderer {
     }
 
     update() {
-        if ( this.debug.active ) {
-            this.debugRender()
-        } else {
-            this.productionRender()
-        }
+        this.productionRender()
     }
 
     productionRender() {
@@ -122,7 +113,7 @@ export default class Renderer {
         // Instance
         // console.log(this.sizes.width, this.sizes.height)
         this.instance.setSize( this.sizes.width, this.sizes.height )
-        this.instance.setPixelRatio( this.sizes.pixelRatio )
+        this.instance.setPixelRatio( Math.min( this.sizes.pixelRatio, 2 ) )
     }
 
     destroy() {

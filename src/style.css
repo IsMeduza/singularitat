@@ -28,13 +28,15 @@ body
 }
 
 /********************* Debug Panel *********************/
-
+/* Debug panel eliminat per optimització */
+/*
 #debug-panel
 {
     position: fixed;
     right: 0;
     z-index: 10000;
 }
+*/
 
 /********************* End Debug Panel *********************/
 
@@ -52,6 +54,70 @@ gizmo-helper:hover {
     cursor: pointer;
 }
 /********************* End Gizmo *********************/
+
+/********************* Credits *********************/
+
+#credits {
+    position: fixed;
+    bottom: 15px;
+    left: 15px;
+    z-index: 100;
+    font-family: 'Courier New', monospace;
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.8);
+    text-align: left;
+    line-height: 1.6;
+    pointer-events: auto;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px 14px;
+    border-radius: 6px;
+    border: 1px solid rgba(255, 140, 0, 0.4);
+    backdrop-filter: blur(6px);
+    max-width: 320px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+#credits.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+#credits .credits-original,
+#credits .credits-optimized {
+    margin-bottom: 4px;
+}
+
+#credits .credits-original strong,
+#credits .credits-optimized strong {
+    color: rgba(255, 255, 255, 0.9);
+    margin-right: 4px;
+}
+
+#credits a {
+    color: #ff8c00;
+    text-decoration: none;
+    transition: color 0.2s, text-shadow 0.2s;
+    font-weight: bold;
+}
+
+#credits a:hover {
+    color: #ffa500;
+    text-shadow: 0 0 8px rgba(255, 140, 0, 0.8);
+}
+
+#credits .credits-details {
+    display: block;
+    font-size: 9px;
+    color: rgba(255, 255, 255, 0.6);
+    margin-top: 6px;
+    padding-top: 6px;
+    border-top: 1px solid rgba(255, 140, 0, 0.2);
+    line-height: 1.4;
+}
+
+/********************* End Credits *********************/
 
 #preloader {
     z-index: 9999;

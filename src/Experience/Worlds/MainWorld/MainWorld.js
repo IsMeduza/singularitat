@@ -33,7 +33,7 @@ export default class MainWorld extends EventEmitter {
     constructor() {
         super();
 
-        this._setDebug()
+        // this._setDebug()
 
         this.init()
 
@@ -46,7 +46,7 @@ export default class MainWorld extends EventEmitter {
 
         this.environment = new Environment( { world: this } )
 
-        this.debugHelpers = new DebugHelpers( { world: this } )
+        // this.debugHelpers = new DebugHelpers( { world: this } )
     }
 
     animationPipeline() {
@@ -69,7 +69,7 @@ export default class MainWorld extends EventEmitter {
     update( deltaTime ) {
         if ( !this.enabled ) return
 
-        this.debugHelpers?.update( deltaTime )
+        // this.debugHelpers?.update( deltaTime )
         this.blackHole?.update( deltaTime )
 
         this.camera?.update()

@@ -21,7 +21,7 @@ export default class Environment {
         this.setEnvironmentMap()
         //this.setBackground()
 
-        this._setDebug()
+        // this._setDebug()
     }
 
     setAmbientLight() {

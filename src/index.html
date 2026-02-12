@@ -3,18 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Singularity</title>
-    <link rel="icon" href="./images/icons/favicon.png" type="image/png">
+    <title>Singularitat</title>
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="./style.css">
     <!-- Google Tag Manager -->
-    <script>(function (w, d, s, l, i) {
-        w[l] = w[l] || [];
-        w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
-        var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
-        j.async = true;
-        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-        f.parentNode.insertBefore(j, f);
-    })(window, document, 'script', 'dataLayer', 'GTM-PQNGKVXV');</script>
+    <script>
+        // Only load GTM in production or when GTM_ID is set
+        const gtmId = import.meta.env.VITE_GTM_ID || 'GTM-PQNGKVXV';
+        if (import.meta.env.MODE === 'production' || gtmId) {
+            (function (w, d, s, l, i) {
+                w[l] = w[l] || [];
+                w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+                var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+                j.async = true;
+                j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+                f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', gtmId);
+        }
+    </script>
     <!-- End Google Tag Manager -->
 </head>
 <body>
@@ -26,9 +32,19 @@
 <!-- End Google Tag Manager (noscript) -->
 <canvas id="preloader"></canvas>
 
-<div id="debug-panel" style="width: 400px;"></div>
+<!-- Debug panel eliminat per optimització -->
+<!-- <div id="debug-panel" style="width: 400px;"></div> -->
 
 <canvas class="webgl"></canvas>
+
+<div id="credits">
+    <div class="credits-original">
+        <strong>Creado por:</strong> <a href="https://github.com/MisterPrada/singularity" target="_blank" rel="noopener">MisterPrada</a>
+    </div>
+    <div class="credits-optimized">
+        <strong>Optimizado por:</strong> <a href="https://max.webnou.site" target="_blank" rel="noopener">MaxSM</a>
+    </div>
+</div>
 
 <script type="module" src="./script.js"></script>
 </body>

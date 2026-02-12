@@ -26,71 +26,14 @@ export default [
     //     }
     // },
 
-    {
-        name: 'displacementTexture',
-        type: 'texture',
-        obfuscate: true,
-        path: './textures/displacement.jpg',
-        meta: {
-            "type": "texture"
-        }
-    },
-    // {
-    //     name: 'foxModel',
-    //     type: 'gltfModel',
-    //     obfuscate: true,
-    //     path: './models/fox.glb',
-    //     meta: {
-    //         "type": "gltfModel"
-    //     }
-    // },
-    // {
-    //     name: 'damagedHelmetModel',
-    //     type: 'gltfModel',
-    //     obfuscate: true,
-    //     path: './models/DamagedHelmet.glb',
-    //     meta: {
-    //         "type": "gltfModel"
-    //     }
-    // },
-
-    // // Grass
-    // {
-    //     name: 'grass1Texture',
-    //     type: 'texture',
-    //     obfuscate: true,
-    //     path: './textures/grass/grass1.png',
-    //     meta: {
-    //         "type": "texture"
-    //     }
-    // },
-    // {
-    //     name: 'grass2Texture',
-    //     type: 'texture',
-    //     obfuscate: true,
-    //     path: './textures/grass/grass2.png',
-    //     meta: {
-    //         "type": "texture"
-    //     }
-    // },
-    {
-        name: 'gridTexture',
-        type: 'texture',
-        obfuscate: true,
-        path: './textures/grass/grid.png',
-        meta: {
-            "type": "texture"
-        }
-    },
-    {
-        name: 'tileDataTexture',
-        type: 'texture',
-        obfuscate: true,
-        path: './textures/grass/tileData.jpg',
-        meta: {
-            "type": "texture"
-        }
-    },
+    // Unused assets commented out (~4MB saved)
+    // { name: 'displacementTexture', type: 'texture', obfuscate: true, path: './textures/displacement.jpg', meta: { "type": "texture" } },
+    // { name: 'foxModel', type: 'gltfModel', obfuscate: true, path: './models/fox.glb', meta: { "type": "gltfModel" } },
+    // { name: 'damagedHelmetModel', type: 'gltfModel', obfuscate: true, path: './models/DamagedHelmet.glb', meta: { "type": "gltfModel" } },
+    // { name: 'grass1Texture', type: 'texture', obfuscate: true, path: './textures/grass/grass1.png', meta: { "type": "texture" } },
+    // { name: 'grass2Texture', type: 'texture', obfuscate: true, path: './textures/grass/grass2.png', meta: { "type": "texture" } },
+    // { name: 'gridTexture', type: 'texture', obfuscate: true, path: './textures/grass/grid.png', meta: { "type": "texture" } },
+    // { name: 'tileDataTexture', type: 'texture', obfuscate: true, path: './textures/grass/tileData.jpg', meta: { "type": "texture" } },
     {
         name: 'starsTexture',
         type: 'texture',

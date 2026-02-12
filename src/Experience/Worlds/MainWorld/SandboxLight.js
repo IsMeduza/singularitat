@@ -58,7 +58,7 @@ export default class SandboxLight extends Model {
         this.transformControls = this.world.camera.transformControls
 
         this.init()
-        this._setDebug()
+        // this._setDebug()
     }
 
     init() {

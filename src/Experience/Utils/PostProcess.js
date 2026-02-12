@@ -53,7 +53,7 @@ export default class PostProcess {
         this.mainWorld = this.worlds.mainWorld
 
         this.setComposer()
-        this.setDebug()
+        // this.setDebug()
     }
 
     setComposer() {
@@ -232,11 +232,7 @@ export default class PostProcess {
     }
 
     update( deltaTime ) {
-        if ( this.debug.active ) {
-            return this.debugRender()
-        } else {
-            return this.productionRender()
-        }
+        return this.productionRender()
     }
 
 }

@@ -24,6 +24,7 @@ export default ({ mode }) => ({
     server:
     {
         host: true,
+        port: 3000,
         open: !isCodeSandbox, // Open if it's not a CodeSandbox
         headers: {
             'Cross-Origin-Opener-Policy': 'same-origin',
@@ -40,7 +41,7 @@ export default ({ mode }) => ({
     [
         restart({ restart: [ '../static/**', ] }), // Restart server on static file change
         glsl(),
-        basicSsl(),
+        // basicSsl(),
         // Terminal({
         //     console: 'terminal',
         //     output: ['terminal', 'console']

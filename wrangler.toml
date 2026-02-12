@@ -1,0 +1,23 @@
+name = "singularitat"
+compatibility_date = "2026-02-12"
+
+[build]
+command = "npm run build"
+
+[site]
+bucket = "./dist"
+
+# Headers for security and COOP/COEP
+[[headers]]
+for = "/*"
+[headers.values]
+Cross-Origin-Opener-Policy = "same-origin"
+Cross-Origin-Embedder-Policy = "require-corp"
+X-Frame-Options = "DENY"
+X-Content-Type-Options = "nosniff"
+
+# Cache static assets
+[[headers]]
+for = "/assets/*"
+[headers.values]
+Cache-Control = "public, max-age=31536000, immutable"

@@ -68,7 +68,7 @@ export default class Experience extends EventEmitter {
         this.timeline = gsap.timeline({
             paused: true,
         });
-        this.debug = new Debug()
+        // this.debug = new Debug()
         this.sizes = new Sizes()
         this.time = new Time()
         this.ui = new Ui()
@@ -90,6 +90,11 @@ export default class Experience extends EventEmitter {
         this.resources.on( 'ready', () => {
             setTimeout( () => {
                 window.preloader.hidePreloader()
+                // Show credits after preloader starts hiding
+                const credits = document.getElementById('credits')
+                if (credits) {
+                    credits.classList.add('visible')
+                }
                 // window.preloader.showPlayButton(() => {
                 //     // start media playing
                 // })
@@ -120,14 +125,14 @@ export default class Experience extends EventEmitter {
         this.renderer.postInit()
         this.postProcess?.postInit()
         this.worlds?.postInit()
-        this.debug?.postInit()
+        // this.debug?.postInit()
     }
 
     resize() {
         this.worlds.resize()
         this.renderer.resize()
         this.postProcess?.resize()
-        this.debug?.resize()
+        // this.debug?.resize()
         this.state?.resize()
         this.sound?.resize()
     }
@@ -146,13 +151,7 @@ export default class Experience extends EventEmitter {
 
         this.render()
 
-        if ( this.debug.active ) {
-            this.debug.update( this.time.delta )
-        }
-
         await this.postUpdate( this.time.delta )
-
-        this.debug?.stats?.update();
     }
 
     _fireReady() {
@@ -244,7 +243,7 @@ export default class Experience extends EventEmitter {
         this.camera.controls.dispose()
         this.renderer.instance.dispose()
 
-        if ( this.debug.active )
-            this.debug.ui.destroy()
+        // if ( this.debug.active )
+        //     this.debug.ui.destroy()
     }
 }

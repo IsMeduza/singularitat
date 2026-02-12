@@ -32,8 +32,8 @@ export default class BlackHole extends Model {
     container = new THREE.Group();
 
     uniforms = {
-        iterations: uniform( float( 128 ) ),
-        stepSize: uniform( float( 0.0071 ) ),
+        iterations: uniform( float( 64 ) ),
+        stepSize: uniform( float( 0.014 ) ),
         noiseFactor: uniform( float( 0.01 ) ),
         power: uniform( float( 0.3 ) ),
 
@@ -69,7 +69,7 @@ export default class BlackHole extends Model {
         this.transformControls = this.world.camera.transformControls
 
         this.init()
-        this._setDebug()
+        // this._setDebug()
 
         //this.testArrays()
     }
@@ -97,7 +97,7 @@ export default class BlackHole extends Model {
 
     setModel() {
         // add shpere
-        const geometry = new THREE.SphereGeometry( 1, 16, 16 )
+        const geometry = new THREE.SphereGeometry( 1, 8, 8 )
 
         const material = new THREE.MeshStandardNodeMaterial({
             side: THREE.DoubleSide
@@ -177,9 +177,8 @@ export default class BlackHole extends Model {
                 const noiseAmp3 = noiseDeep.mul(zBand);
                 const noiseAmpLen = lengthSqrt(noiseAmp3);
 
-                // Pseudo normal via offset noise
-                const uvForNormal = uv.mul(1.002);
-                const noiseNormal = texture(this.resources.items.noiseDeepTexture, uvForNormal)
+                // Pseudo normal via reusing noise sample (offset was negligible at 0.2%)
+                const noiseNormal = noiseDeep.mul(0.998)
                     .mul(zBand);
                 const noiseNormalLen = lengthSqrt(noiseNormal);
 
