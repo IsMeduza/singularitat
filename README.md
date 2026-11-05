@@ -1,30 +1,35 @@
 # Singularitat
 
-**Live Demo:** https://singularitat.webnou.site/
+Simulació interactiva en 3D d'un forat negre.
 
-**Original project by [MisterPrada](https://github.com/MisterPrada)** | [Original Repository](https://github.com/MisterPrada/singularity)
+**Demo en directe:** https://ismeduza.github.io/singularitat/
 
-## Quick Start
+**Projecte original de [MisterPrada](https://github.com/MisterPrada)** | [Repositori original](https://github.com/MisterPrada/singularity)
+
+## Inici ràpid
 
 ```bash
 npm install
 npm run dev
 ```
 
-## Build
+## Compilació
 
 ```bash
 npm run build
 ```
 
-## Optimizations by [IsMeduza](https://github.com/IsMeduza)
+## Optimitzacions de [IsMeduza](https://github.com/IsMeduza)
 
-- Simplified README from extensive to essential documentation
-- Removed ~4MB of unused assets and example code
-- Cleaned up 641 lines of code while maintaining core functionality
-- Added modern SVG favicon
-- Rewrote preloader for better performance
-- Fine-tuned rendering and post-processing configurations
-- Streamlined camera and environment systems
+- README simplificat a la documentació essencial
+- Eliminats ~4 MB de recursos i codi d'exemple sense ús
+- Netejades 641 línies de codi mantenint la funcionalitat principal
+- Favicon SVG modern
+- Preloader reescrit per a un millor rendiment
+- Ajustos de renderitzat i postprocessat
+- Sistemes de càmera i entorn simplificats
+- Publicació gratuïta a GitHub Pages amb GitHub Actions
+- Eliminades dependències sense ús i Google Tag Manager
+- Web i peu de pàgina en català
 
 https://github.com/user-attachments/assets/e7810d45-6113-4dfc-8884-5c9fbdeca65d

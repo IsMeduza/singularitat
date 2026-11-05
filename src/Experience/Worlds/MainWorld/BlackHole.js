@@ -71,20 +71,6 @@ export default class BlackHole extends Model {
         this.init()
         // this._setDebug()
 
-        //this.testArrays()
-    }
-
-    testArrays() {
-        const buffer = new SharedArrayBuffer( 4 * Float32Array.BYTES_PER_ELEMENT );
-        //const arr = new Float32Array(buffer, 0, 2);
-        const arr = new Int32Array( buffer, 0, 2 );
-
-        Atomics.store( arr, 0, 99999999999999 );
-
-        const value = Atomics.load( arr, 0 );
-
-        console.log( value )
-
     }
 
     init() {
