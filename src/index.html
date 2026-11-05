@@ -10,7 +10,7 @@
     <script>
         // Only load GTM in production or when GTM_ID is set
         const gtmId = import.meta.env.VITE_GTM_ID || 'GTM-PQNGKVXV';
-        if (import.meta.env.MODE === 'production' || gtmId) {
+        if (import.meta.env.PROD && gtmId) {
             (function (w, d, s, l, i) {
                 w[l] = w[l] || [];
                 w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});

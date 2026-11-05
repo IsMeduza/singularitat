@@ -1,9 +1,6 @@
 import restart from 'vite-plugin-restart'
 import glsl from 'vite-plugin-glsl'
-import basicSsl from '@vitejs/plugin-basic-ssl'
 import path from 'path'
-import Terminal from 'vite-plugin-terminal'
-//import obfuscatorPlugin from "vite-plugin-javascript-obfuscator";
 
 
 const dirname = path.resolve()
@@ -41,21 +38,5 @@ export default ({ mode }) => ({
     [
         restart({ restart: [ '../static/**', ] }), // Restart server on static file change
         glsl(),
-        // basicSsl(),
-        // Terminal({
-        //     console: 'terminal',
-        //     output: ['terminal', 'console']
-        // })
-        // obfuscatorPlugin({
-        //     options: {
-        //         //include: ["src/path/to/file.js", "path/anyjs/**/*.js", /foo.js$/],
-        //         exclude: [/node_modules/],
-        //         apply: "build",
-        //         debugger: true,
-        //         // your javascript-obfuscator options
-        //         debugProtection: true,
-        //         // ...  [See more options](https://github.com/javascript-obfuscator/javascript-obfuscator)
-        //     },
-        // }),
     ]
 })
