@@ -1,7 +1,5 @@
 # Singularitat
 
-**Live Demo:** https://singularitat.webnou.site/
-
 **Original project by [MisterPrada](https://github.com/MisterPrada)** | [Original Repository](https://github.com/MisterPrada/singularity)
 
 ## Quick Start

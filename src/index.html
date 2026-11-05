@@ -10,7 +10,7 @@
     <script>
         // Only load GTM in production or when GTM_ID is set
         const gtmId = import.meta.env.VITE_GTM_ID || 'GTM-PQNGKVXV';
-        if (import.meta.env.MODE === 'production' || gtmId) {
+        if (import.meta.env.PROD && gtmId) {
             (function (w, d, s, l, i) {
                 w[l] = w[l] || [];
                 w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
@@ -37,14 +37,11 @@
 
 <canvas class="webgl"></canvas>
 
-<div id="credits">
-    <div class="credits-original">
-        <strong>Creado por:</strong> <a href="https://github.com/MisterPrada/singularity" target="_blank" rel="noopener">MisterPrada</a>
-    </div>
-    <div class="credits-optimized">
-        <strong>Optimizado por:</strong> <a href="https://max.webnou.site" target="_blank" rel="noopener">MaxSM</a>
-    </div>
-</div>
+<footer id="credits">
+    <span>Creado por <a href="https://github.com/MisterPrada/singularity" target="_blank" rel="noopener">MisterPrada</a></span>
+    <span class="sep" aria-hidden="true">·</span>
+    <span>Optimizado por <a href="https://github.com/IsMeduza" target="_blank" rel="noopener">MaxSM</a></span>
+</footer>
 
 <script type="module" src="./script.js"></script>
 </body>
