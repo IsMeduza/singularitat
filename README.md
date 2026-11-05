@@ -1,5 +1,7 @@
 # Singularitat
 
+**Live Demo:** https://ismeduza.github.io/singularitat/
+
 **Original project by [MisterPrada](https://github.com/MisterPrada)** | [Original Repository](https://github.com/MisterPrada/singularity)
 
 ## Quick Start
